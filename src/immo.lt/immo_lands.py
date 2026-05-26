@@ -15,7 +15,7 @@ import urllib
 import sys
 
 # Debug mode
-DEBUG = True
+DEBUG = False
 
 # RealEstateScraper scraper class
 class RealEstateScraper(scrapy.Spider):
@@ -23,7 +23,7 @@ class RealEstateScraper(scrapy.Spider):
     name = 'real-estate-scraper'
     
     # Entry point
-    base_url = ''
+    base_url = 'https://www.immo.lt/en/objects'
 
     # Custom headers
     headers = {
@@ -42,7 +42,7 @@ class RealEstateScraper(scrapy.Spider):
       is_rent = 'Rent' if 'rent' in self.base_url else 'Sale'
       filename = './output/Residential_' + is_rent + '_Flats_' + datetime.datetime.today().strftime('%Y-%m-%d-%H-%M') + '.csv'
       with open(filename, 'w') as f:
-        columns = []
+        columns = ['url', 'title', 'properties', 'features', 'description', 'images']
         f.write(','.join(columns) + '\n')
 
       # Current page
@@ -69,22 +69,21 @@ class RealEstateScraper(scrapy.Spider):
         current_page = response.meta.get('current_page')
 
       # Extract property links
-      links = response.css('a[data-cy="propertyUrl"]::attr(href)').getall() # just a placeholder
+      links = response.css('h3[class="listing__title"]').css('a::attr(href)').getall()
 
       # Loop over property card URLs
       for card_url in links:
-        print(card_url)
         # Crawl property listing
-        #yield response.follow(
-        #  url=card_url,
-        #  headers=self.headers,
-        #  meta={ 'filename': filename },
-        #  callback=self.parse_listing
-        #)
+        yield response.follow(
+          url=card_url,
+          headers=self.headers,
+          meta={ 'filename': filename },
+          callback=self.parse_listing
+        )
         #break
  
       # Extract total pages
-      try: total_pages = 10
+      try: total_pages = max([int(i) for i in response.css('a[class="pagination__link"]::text').getall()])
       except: total_pages = 1
  
       # Handle pagination within each location URL
@@ -108,15 +107,15 @@ class RealEstateScraper(scrapy.Spider):
           print('PAGE %s | %s' % (current_page, total_pages), next_page)
 
           # Crawl next page
-          #yield response.follow(
-          #  url=next_page,
-          #  headers=self.headers,
-          #  meta={
-          #    'filename': filename,
-          #    'current_page': current_page
-          #  },
-          #  callback=self.parse_links
-          #)
+          yield response.follow(
+            url=next_page,
+            headers=self.headers,
+            meta={
+              'filename': filename,
+              'current_page': current_page
+            },
+            callback=self.parse_links
+          )
 
     # Parse property card listing
     def parse_listing(self, response):
@@ -128,9 +127,31 @@ class RealEstateScraper(scrapy.Spider):
         filename = response.meta.get('filename')
         url = response.url
       
+      # Extract properties
+      properties_dict = {}
+      properties_raw = response.css('ul[class="property__details-list"]')
+      keys = [i.replace(':', '').strip() for i in properties_raw.css('span[class="property__details-item--cat"]::text').getall()]
+      vals = properties_raw.css('li[class="property__details-item"]::text').getall()
+      for i in range(len(keys)):
+        properties_dict[keys[i]] = vals[i]
+      
+      # Extract features
+      features_list = [i.strip() for i in response.css('li[class="property__features-item"]::text').getall()]
+      
+      # Extract description
+      description = ' '.join(list(filter(None, [i.strip().replace('_', '') for i in response.css('div[class="object-detailed-text"] *::text').getall()])))
+      
+      # Extract image URLs
+      images = response.css('a[data-fancybox="gallery"]::attr(href)').getall()
+      
       # CSV entry
       features = {
-        'url': url
+        'url': url,
+        'title': response.css('h2[class="property__name"]::text').get().strip(),
+        'properties': properties_dict,
+        'features': features_list,
+        'description': description,
+        'images': images
       }
 
       # Print extracted data
@@ -150,4 +171,4 @@ if __name__ == '__main__':
     process = CrawlerProcess()
     process.crawl(RealEstateScraper)
     process.start()
-  else: RealEstateScraper.parse_links(RealEstateScraper, '')
+  else: RealEstateScraper.parse_listing(RealEstateScraper, '')
