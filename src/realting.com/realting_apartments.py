@@ -184,8 +184,12 @@ class RealEstateScraper(scrapy.Spider):
       
       # Extract coordinates
       try:
-        latitude = response._text.split('"latitude":')[-1].split(',')[0]
-        longitude = response._text.split('"longitude":')[-1].split('}')[0]
+        if DEBUG:
+          latitude = response._text.split('"latitude":')[-1].split(',')[0]
+          longitude = response._text.split('"longitude":')[-1].split('}')[0]
+        else:
+          latitude = response.text.split('"latitude":')[-1].split(',')[0]
+          longitude = response.text.split('"longitude":')[-1].split('}')[0]
       except:
         latitude = 'N/A'
         longitude = 'N/A'
