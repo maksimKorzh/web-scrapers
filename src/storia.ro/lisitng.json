@@ -1,0 +1,778 @@
+{
+  "props": {
+    "pageProps": {
+      "lang": "ro",
+      "id": "GNJl",
+      "ad": {
+        "id": 10200943,
+        "title": "Apartament 2 camere de vanzare",
+        "url": "https://www.storia.ro/ro/oferta/apartament-2-camere-de-vanzare-IDGNJl",
+        "description": "<p>Apartament de vanzare. Este nedecomandat, 27mp, et 4/4. In T\u0103t\u0103ra\u0219i, langa complex Ciurchi, in apropierea sta\u021biilor pt mijloace de transport. Baia este f\u0103r\u0103 cabina de dus sau cada. F\u0103r\u0103 centrala. Se vinde complet mobilat. Rog \u0219i ofer seriozitate. Pre\u021bul este 48000 euro fix. Nu este negociabil.</p>",
+        "createdAt": "2026-03-26T11:07:17Z",
+        "modifiedAt": "2026-05-28T15:13:55Z",
+        "referenceId": "",
+        "externalId": "",
+        "openDay": null,
+        "slug": "apartament-2-camere-de-vanzare-IDGNJl",
+        "advertiserType": "private",
+        "advertType": "PRIVATE",
+        "images": [
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNpeDMzem83Zmt5ZjEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0E5_zGcsb0Am_p8qUevuWw1Ag7xKlmR7ybrr2gbSd8o/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNpeDMzem83Zmt5ZjEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0E5_zGcsb0Am_p8qUevuWw1Ag7xKlmR7ybrr2gbSd8o/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNpeDMzem83Zmt5ZjEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0E5_zGcsb0Am_p8qUevuWw1Ag7xKlmR7ybrr2gbSd8o/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNpeDMzem83Zmt5ZjEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0E5_zGcsb0Am_p8qUevuWw1Ag7xKlmR7ybrr2gbSd8o/image;s=1280x1024;q=80"
+          },
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InAxdXgxcmV6cml3bzEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.g25A3Lqph1qFMckRC709s6ga8I_j4XwiET4mKl24a1M/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InAxdXgxcmV6cml3bzEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.g25A3Lqph1qFMckRC709s6ga8I_j4XwiET4mKl24a1M/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InAxdXgxcmV6cml3bzEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.g25A3Lqph1qFMckRC709s6ga8I_j4XwiET4mKl24a1M/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InAxdXgxcmV6cml3bzEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.g25A3Lqph1qFMckRC709s6ga8I_j4XwiET4mKl24a1M/image;s=1280x1024;q=80"
+          },
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRtOXA0NzZpY2Z4bjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jxu_mDRsM7zjufOlz-wy1QBdWM2mgxCIfH5EhL60Hjs/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRtOXA0NzZpY2Z4bjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jxu_mDRsM7zjufOlz-wy1QBdWM2mgxCIfH5EhL60Hjs/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRtOXA0NzZpY2Z4bjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jxu_mDRsM7zjufOlz-wy1QBdWM2mgxCIfH5EhL60Hjs/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRtOXA0NzZpY2Z4bjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jxu_mDRsM7zjufOlz-wy1QBdWM2mgxCIfH5EhL60Hjs/image;s=1280x1024;q=80"
+          },
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im4xczk3dGJ0bGIwai1BUk8iLCJ3IjpbeyJmbiI6IjN3NTY2eGdqcHkycDEtQVJPIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.qmALocnPL6LaBg__i-JOyvTkofZ-uHtApSppTKcwXfo/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im4xczk3dGJ0bGIwai1BUk8iLCJ3IjpbeyJmbiI6IjN3NTY2eGdqcHkycDEtQVJPIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.qmALocnPL6LaBg__i-JOyvTkofZ-uHtApSppTKcwXfo/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im4xczk3dGJ0bGIwai1BUk8iLCJ3IjpbeyJmbiI6IjN3NTY2eGdqcHkycDEtQVJPIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.qmALocnPL6LaBg__i-JOyvTkofZ-uHtApSppTKcwXfo/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im4xczk3dGJ0bGIwai1BUk8iLCJ3IjpbeyJmbiI6IjN3NTY2eGdqcHkycDEtQVJPIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.qmALocnPL6LaBg__i-JOyvTkofZ-uHtApSppTKcwXfo/image;s=1280x1024;q=80"
+          },
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im10aGZxYWIxNmh2ODEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OczfDP3HvsnSCptlzU2ASkMAARffHIO9KTqadnQnfCo/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im10aGZxYWIxNmh2ODEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OczfDP3HvsnSCptlzU2ASkMAARffHIO9KTqadnQnfCo/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im10aGZxYWIxNmh2ODEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OczfDP3HvsnSCptlzU2ASkMAARffHIO9KTqadnQnfCo/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im10aGZxYWIxNmh2ODEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OczfDP3HvsnSCptlzU2ASkMAARffHIO9KTqadnQnfCo/image;s=1280x1024;q=80"
+          },
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InE0Z2h0MmE4NHZpdjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Cf87ZlYvda8TCjngYzvrPsg4VEB8TiTnl5QFhJUepeI/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InE0Z2h0MmE4NHZpdjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Cf87ZlYvda8TCjngYzvrPsg4VEB8TiTnl5QFhJUepeI/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InE0Z2h0MmE4NHZpdjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Cf87ZlYvda8TCjngYzvrPsg4VEB8TiTnl5QFhJUepeI/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InE0Z2h0MmE4NHZpdjMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Cf87ZlYvda8TCjngYzvrPsg4VEB8TiTnl5QFhJUepeI/image;s=1280x1024;q=80"
+          },
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InA3NWVobDRlcHBtdTMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.y2B1ndNDDVQ78otXq0yCF6JpLdtJiDPjPfGjRUqZeFk/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InA3NWVobDRlcHBtdTMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.y2B1ndNDDVQ78otXq0yCF6JpLdtJiDPjPfGjRUqZeFk/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InA3NWVobDRlcHBtdTMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.y2B1ndNDDVQ78otXq0yCF6JpLdtJiDPjPfGjRUqZeFk/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InA3NWVobDRlcHBtdTMtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.y2B1ndNDDVQ78otXq0yCF6JpLdtJiDPjPfGjRUqZeFk/image;s=1280x1024;q=80"
+          },
+          {
+            "thumbnail": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img5dGVtbHp0YWQyOTEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.LUnGOk9ofCYAhU9KdXKGLEtOg7Vx64KDXOrngpS2ZwU/image;s=184x138;q=80",
+            "small": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img5dGVtbHp0YWQyOTEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.LUnGOk9ofCYAhU9KdXKGLEtOg7Vx64KDXOrngpS2ZwU/image;s=314x236;q=80",
+            "medium": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img5dGVtbHp0YWQyOTEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.LUnGOk9ofCYAhU9KdXKGLEtOg7Vx64KDXOrngpS2ZwU/image;s=655x491;q=80",
+            "large": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img5dGVtbHp0YWQyOTEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.LUnGOk9ofCYAhU9KdXKGLEtOg7Vx64KDXOrngpS2ZwU/image;s=1280x1024;q=80"
+          }
+        ],
+        "floorPlans": [
+          "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNpeDMzem83Zmt5ZjEtQVJPIiwidyI6W3siZm4iOiIzdzU2NnhnanB5MnAxLUFSTyIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0E5_zGcsb0Am_p8qUevuWw1Ag7xKlmR7ybrr2gbSd8o/image"
+        ],
+        "source": "urn:site:local",
+        "seo": {
+          "title": "2 camere, apartament de vanzare - Iasi (judet), Tatarasi Sud - 10200943 \u2022 www.storia.ro",
+          "description": "Excelent apartament de v\u00e2nzare cu 2 \u00een Iasi (judet), Tatarasi Sud, la 48 000 \u20ac. Acest apartament de v\u00e2nzare  situat la etajul 4 are 27 m\u00b2 m&sup2 suprafa\u021ba util\u0103 \u0219i 27 m\u00b2 suprafa\u021ba construit\u0103. Conform Proprietarul principalele calitati ale apartamentului sunt cablu tv, interfon, mobilier. Storia 10200943"
+        },
+        "developerURL": "",
+        "creationSource": "posting_form",
+        "similarAdsLinkUrl": "",
+        "shouldShowExpiredAdPage": null,
+        "market": "SECONDARY",
+        "price": {
+          "type": "VISIBLE"
+        },
+        "developmentId": 0,
+        "developmentTitle": "",
+        "developmentUrl": "",
+        "status": "active",
+        "category": {
+          "id": 101,
+          "name": []
+        },
+        "adCategory": {
+          "id": 101,
+          "name": "FLAT",
+          "type": "SELL"
+        },
+        "specialOffer": null,
+        "target": {
+          "Area": "27",
+          "AreaRange": [],
+          "Build_year": "1980",
+          "Building_floors_num": "4",
+          "Building_material": [
+            "brick"
+          ],
+          "Building_ownership": [
+            "full_ownership"
+          ],
+          "Building_type": [
+            "block"
+          ],
+          "City": null,
+          "City_id": null,
+          "Construction_status": [
+            "ready_to_use"
+          ],
+          "Country": "Rom\u00e2nia",
+          "Equipment_types": [
+            "furniture",
+            "washing_machine",
+            "fridge",
+            "stove",
+            "oven",
+            "tv"
+          ],
+          "Floor_no": [
+            "floor_4"
+          ],
+          "Id": "10200943",
+          "MarketType": "secondary",
+          "Media_types": [
+            "cable-television"
+          ],
+          "ObidoAdvert": "n",
+          "OfferType": "vanzare",
+          "Photo": "aHR0cHM6Ly9pcmVsYW5kLmFwb2xsby5vbHhjZG4uY29tL3YxL2ZpbGVzL2V5Sm1iaUk2SW1OcGVETXplbTgzWm10NVpqRXRRVkpQSWl3aWR5STZXM3NpWm00aU9pSXpkelUyTm5obmFuQjVNbkF4TFVGU1R5SXNJbk1pT2lJeE5DSXNJbkFpT2lJeE1Dd3RNVEFpTENKaElqb2lNQ0o5WFgwLlQxWW5aUGlxTjRaYUw2UnU5WkpwU2l0cFNRdUNVejd0a3R3MkZ2cnNfTWsvaW1hZ2U7cz02NTV4NDkxO3E9ODA=",
+          "Price": 48000,
+          "PriceRange": [
+            "20001-50000"
+          ],
+          "Price_per_m": 1778,
+          "ProperType": "apartament",
+          "Province": null,
+          "RegularUser": "y",
+          "Rent": 250,
+          "Rooms_num": [
+            "2"
+          ],
+          "Security_types": [
+            "entryphone"
+          ],
+          "Subregion": null,
+          "Title": "QXBhcnRhbWVudCAyIGNhbWVyZSBkZSB2YW56YXJl",
+          "Windows_type": [
+            "plastic"
+          ],
+          "categoryId": "101",
+          "env": "production",
+          "hidePrice": "0",
+          "seller_id": "4527944",
+          "user_type": "private"
+        },
+        "characteristics": [
+          {
+            "key": "price",
+            "value": "48000",
+            "currency": "EUR",
+            "localizedValue": "48 000 \u20ac"
+          },
+          {
+            "key": "rent",
+            "value": "250",
+            "currency": "EUR",
+            "localizedValue": "250 \u20ac"
+          },
+          {
+            "key": "price_per_m",
+            "value": "1778",
+            "currency": "EUR",
+            "localizedValue": "1778 \u20ac/m\u00b2"
+          },
+          {
+            "key": "m",
+            "value": "27",
+            "localizedValue": "27 m\u00b2",
+            "currency": ""
+          },
+          {
+            "key": "market",
+            "value": "secondary",
+            "localizedValue": "",
+            "currency": ""
+          },
+          {
+            "key": "building_type",
+            "value": "block",
+            "localizedValue": "",
+            "currency": ""
+          },
+          {
+            "key": "floor_no",
+            "value": "floor_4",
+            "localizedValue": "",
+            "currency": ""
+          },
+          {
+            "key": "construction_status",
+            "value": "ready_to_use",
+            "localizedValue": "",
+            "currency": ""
+          },
+          {
+            "key": "building_material",
+            "value": "brick",
+            "localizedValue": "",
+            "currency": ""
+          },
+          {
+            "key": "windows_type",
+            "value": "plastic",
+            "localizedValue": "",
+            "currency": ""
+          },
+          {
+            "key": "building_ownership",
+            "value": "full_ownership",
+            "localizedValue": "",
+            "currency": ""
+          },
+          {
+            "key": "rooms_num",
+            "value": "2",
+            "localizedValue": "2",
+            "currency": ""
+          },
+          {
+            "key": "build_year",
+            "value": "1980",
+            "localizedValue": "1980",
+            "currency": ""
+          },
+          {
+            "key": "building_floors_num",
+            "value": "4",
+            "localizedValue": "4",
+            "currency": ""
+          },
+          {
+            "key": "free_from",
+            "value": "2026-02-20",
+            "localizedValue": "2026-02-20",
+            "currency": ""
+          }
+        ],
+        "topInformation": [
+          {
+            "label": "area",
+            "values": [
+              "27"
+            ],
+            "unit": "m\u00b2"
+          },
+          {
+            "label": "construction_status",
+            "values": [
+              "construction_status::ready_to_use"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "rent",
+            "values": [
+              "250 \u20ac"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "floor",
+            "values": [
+              "floor_no::floor_4",
+              "/4"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "rooms_num",
+            "values": [
+              "2"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "market",
+            "values": [
+              "market::secondary"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "building_ownership",
+            "values": [
+              "building_ownership::full_ownership"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "free_from",
+            "values": [
+              "2026-02-20"
+            ],
+            "unit": ""
+          }
+        ],
+        "additionalInformation": [
+          {
+            "label": "advertiser_type",
+            "values": [
+              "advertiser_type::private"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "build_year",
+            "values": [
+              "1980"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "security_types",
+            "values": [
+              "security_types-101::entryphone"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "lift",
+            "values": [
+              "::n"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "building_type",
+            "values": [
+              "building_type::block"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "equipment_types",
+            "values": [
+              "equipment_types::furniture",
+              "equipment_types::washing_machine",
+              "equipment_types::fridge",
+              "equipment_types::stove",
+              "equipment_types::oven",
+              "equipment_types::tv"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "media_types",
+            "values": [
+              "media_types::cable-television"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "windows_type",
+            "values": [
+              "windows_type::plastic"
+            ],
+            "unit": ""
+          },
+          {
+            "label": "building_material",
+            "values": [
+              "building_material::brick"
+            ],
+            "unit": ""
+          }
+        ],
+        "enrichment": null,
+        "location": {
+          "id": "orn:storiaro:location:iasi/iasi/tatarasi-sud",
+          "coordinates": {
+            "latitude": 47.155567,
+            "longitude": 27.617868,
+            "__typename": "Coordinates"
+          },
+          "mapDetails": {
+            "radius": 0,
+            "zoom": 14,
+            "__typename": "MapDetails"
+          },
+          "reverseGeocoding": {
+            "locations": [
+              {
+                "id": "iasi",
+                "locationLevel": "county",
+                "name": "Iasi",
+                "fullName": "Iasi",
+                "fullNameItems": [
+                  "Iasi"
+                ],
+                "parentIds": [],
+                "__typename": "BasicLocationObject"
+              },
+              {
+                "id": "iasi/iasi",
+                "locationLevel": "county_capital",
+                "name": "Iasi",
+                "fullName": "Iasi, Iasi",
+                "fullNameItems": [
+                  "Iasi",
+                  "Iasi"
+                ],
+                "parentIds": [
+                  "iasi"
+                ],
+                "__typename": "BasicLocationObject"
+              },
+              {
+                "id": "iasi/iasi/tatarasi-sud",
+                "locationLevel": "district",
+                "name": "Tatarasi Sud",
+                "fullName": "Tatarasi Sud, Iasi, Iasi",
+                "fullNameItems": [
+                  "Tatarasi Sud",
+                  "Iasi",
+                  "Iasi"
+                ],
+                "parentIds": [
+                  "iasi",
+                  "iasi/iasi"
+                ],
+                "__typename": "BasicLocationObject"
+              }
+            ]
+          },
+          "address": {
+            "street": null,
+            "subdistrict": null,
+            "district": null,
+            "city": null,
+            "county": null,
+            "municipality": null,
+            "province": null,
+            "postalCode": null
+          }
+        },
+        "unitGroups": {
+          "unitsGroupBy": "",
+          "items": []
+        },
+        "userAdverts": [],
+        "owner": {
+          "id": 4527944,
+          "type": "private",
+          "phones": [],
+          "name": "Maria",
+          "imageUrl": null,
+          "address": null,
+          "contacts": [
+            {
+              "name": "Maria",
+              "phone": "+40773905662",
+              "imageURLSmall": null
+            }
+          ]
+        },
+        "agency": null,
+        "videoThumbnailUrl": "",
+        "contactDetails": {
+          "name": "Maria",
+          "type": "private",
+          "phones": [
+            "+40773905662"
+          ],
+          "imageUrl": null
+        },
+        "paginatedUnits": {
+          "items": [],
+          "pagination": {
+            "page": 1,
+            "totalPages": 1,
+            "totalResults": 0
+          },
+          "isPriceHidden": false,
+          "facets": {
+            "floorNumber": [],
+            "numberOfRooms": [],
+            "price": [],
+            "area": []
+          }
+        },
+        "links": {
+          "localPlanUrl": "",
+          "walkaroundUrl": "",
+          "videoUrl": "",
+          "view3dUrl": ""
+        },
+        "videos": null,
+        "publicId": null,
+        "pushedUpAt": null,
+        "services": [],
+        "exclusiveOffer": false,
+        "features": [],
+        "featuresByCategory": [],
+        "featuresWithoutCategory": [],
+        "breadcrumbs": [],
+        "property": {},
+        "plans": null,
+        "completedUnitsCount": null,
+        "moderatedUnitsCount": null,
+        "awaitingUnitsCount": null,
+        "activeUnitsCount": null,
+        "totalUnitsCount": null,
+        "additionalCostsCount": null
+      },
+      "relativeUrl": "/ro/oferta/apartament-2-camere-de-vanzare-IDGNJl",
+      "adTrackingData": {
+        "touch_point_page": "ad_page",
+        "lat": 47.155567,
+        "long": 27.617868,
+        "ad_photo": 8,
+        "price_currency": "EUR",
+        "special_offer_type": null,
+        "agent_id": null,
+        "parent_id": null,
+        "ad_id": "10200943",
+        "ad_price": 48000,
+        "business": "vanzare",
+        "city_id": null,
+        "city_name": null,
+        "poster_type": "private",
+        "surface": null,
+        "region_id": null,
+        "region_name": null,
+        "subregion_id": null,
+        "seller_id": "4527944",
+        "obido_advert": "n",
+        "market": "secondary"
+      },
+      "developmentData": null,
+      "isPreviewMode": false,
+      "isUnifiedAdSchemaEnabled": true,
+      "baxterAdHtml": {
+        "ssrSlots": {}
+      },
+      "currentUser": null,
+      "viewMode": "default",
+      "cookiesCategorisation": {
+        "eupubconsent-v2": [
+          "C0001"
+        ],
+        "OptanonAlertBoxClosed": [
+          "C0001"
+        ],
+        "OptanonConsent": [
+          "C0001"
+        ],
+        "OTAdditionalConsentString": [
+          "C0001"
+        ],
+        "access_token": [
+          "C0001"
+        ],
+        "id_token": [
+          "C0001"
+        ],
+        "refresh_token": [
+          "C0001"
+        ],
+        "microservice_token": [
+          "C0001"
+        ],
+        "lastoAuthState": [
+          "C0001"
+        ],
+        "PHPSESSID": [
+          "C0001"
+        ],
+        "laquesis": [
+          "C0001"
+        ],
+        "laquesisff": [
+          "C0001"
+        ],
+        "laquesisqa": [
+          "C0001"
+        ],
+        "laquesissu": [
+          "C0001"
+        ],
+        "lqonap": [
+          "C0001"
+        ],
+        "lqstatus": [
+          "C0001"
+        ],
+        "test": [
+          "C0001"
+        ],
+        "onap": [
+          "C0001"
+        ],
+        "onap_dev": [
+          "C0001"
+        ],
+        "lang": [
+          "C0001"
+        ],
+        "dfp_user_id": [
+          "C0004"
+        ],
+        "AuthState": [
+          "C0001"
+        ],
+        "SID": [
+          "C0001"
+        ],
+        "IDPState": [
+          "C0001"
+        ],
+        "LogoutState": [
+          "C0001"
+        ],
+        "datadome": [
+          "C0001"
+        ],
+        "ldctx": [
+          "C0002"
+        ],
+        "ldff": [
+          "C0002"
+        ],
+        "aws-waf-token": [
+          "C0001"
+        ],
+        "thememode": [
+          "C0003"
+        ],
+        "idccsrf": [
+          "C0001"
+        ],
+        "nsr": [
+          "C0001"
+        ],
+        "O_N": [
+          "C0003"
+        ],
+        "O_Y": [
+          "C0002"
+        ],
+        "O_X": [
+          "C0002"
+        ],
+        "O_LOGGED": [
+          "C0003"
+        ],
+        "hotjarSurvey": [
+          "C0004"
+        ],
+        "contentmode": [
+          "C0001"
+        ]
+      },
+      "experiments": {
+        "EURE-46995": "b",
+        "EURE-47090": "a",
+        "EURE-47468": "a",
+        "EURE-47542": "a",
+        "EURE-47895": "a",
+        "EURE-48007": "b",
+        "EURE-48529": "a",
+        "EURE-48570": "a",
+        "EURE-48666": "b"
+      },
+      "featureFlags": {
+        "isAdAvmModuleEnabled": true,
+        "isGenaiAd2videoEnabled": false,
+        "shouldEnableAd2VideoPreview": false,
+        "isAdFinanceBannerEnabled": false,
+        "isAdFinanceLinkEnabled": true,
+        "isAdMortgageSimulatorEnabled": true,
+        "isAdNeighborhoodPoisEnabled": false,
+        "isLanguageSwitcherEnabled": false,
+        "isListingRentPriceEnabled": false,
+        "isBikPromotionEnabled": true,
+        "isSeoAdsDescriptionEnabled": false,
+        "isPropertyEvaluationPageActive": false,
+        "isRESellerLeadsActive": false,
+        "isSellerLeadsMvpEnabled": false,
+        "isXmlReportEnabled": true,
+        "isOneProductPostingFormEnabled": true,
+        "isAgentAccountMailboxEnabled": false,
+        "isDeveloperGeoPricingEnabled": false,
+        "isIntegrationPageEnabled": true,
+        "isNinFieldEnabledForInvoicing": true,
+        "isMandatoryLoginEnabled": true,
+        "isGeoBasedPricingEnabled": false,
+        "isMyAccountPDFReportsEnabled": true,
+        "isReCaptchaEnabled": true,
+        "isAgencyInvoiceReportEnabled": false,
+        "isRECsrfEnabled": true,
+        "isNexusDeveloperRegistrationFormEnabled": true,
+        "isAgencyPortfolioValuePricingEnabled": false,
+        "isAgencyPortfolioBufferEnabled": false,
+        "isBadgesFeatureEnabled": true,
+        "isInboxCrmIdFilteringEnabled": true,
+        "isDashboardWithStatisticsEnabled": false,
+        "isConciergeMigrationPageEnabled": false,
+        "isAIAssistantChatEnabled": true,
+        "arePaymentReminderBannersEnabled": true,
+        "isSapBlackoutBannerEnabled": false,
+        "isPowerVasOnboardingCampaignEnabled": false,
+        "isEnhancedAgentActivationEnabled": true,
+        "shouldShowExternalDeveloperLink": false,
+        "isPowerVasCardDisplayEnabled": true,
+        "isAgentPermissionsPageEnabled": false,
+        "isSecondStepOfBusinessAccountVerificationRemoved": false,
+        "isPowerVasGroupEnabled": true,
+        "shouldUseUnifiedAdSchema": true,
+        "isNoPhotobookingOnImovirtualPricingEnabled": true,
+        "isEInvoicingEnabled": false,
+        "isNinjaBetaVersionEnabled": true,
+        "hasBusinessRegistrationFlowBeenEnhanced": true,
+        "isSelfRefCanonicalLinkLublinOpoleEnabled": false,
+        "areCityLevelLinksKoninSkierniewiceEnabled": false,
+        "isNexusPromotePageEnabled": false,
+        "isVasAutoRenewalEnabled": false,
+        "isPostingFormAgentAccountEnabled": false,
+        "isPostingFormFreeTextStreetEnabled": true,
+        "isAdsAIEnrichmentEnabled": true,
+        "isEnhancedAgentDeletionEnabled": false,
+        "areAccountLevelStatisticsForAgentsEnabled": false,
+        "areAdLevelStatisticsEnabled": false,
+        "isOurTeamPendingTabEnhanced": false,
+        "isPlDynamicMetaTemplatesEnabled": false,
+        "isCompaniesListingPageEnabled": true,
+        "isDynamicFaqEnabled": true,
+        "isNexusBillingPageEnabled": false,
+        "isTranslateErrorLoggerEnabled": false,
+        "isTranslateErrorFixEnabled": false,
+        "__typename": "FeatureFlags"
+      },
+      "laquesisResult": null,
+      "userSessionId": "d9c561ab-52cd-4652-ae22-e7be821e757b",
+      "unconfirmedUserAuthToken": null,
+      "desktopHeader": {
+        "Is-Desktop": "true"
+      }
+    },
+    "__N_SSP": true
+  },
+  "page": "/ro/oferta/[id]",
+  "query": {
+    "id": "apartament-2-camere-de-vanzare-IDGNJl"
+  },
+  "buildId": "IhSSavljdHX2sPVfBeuPj",
+  "assetPrefix": "https://statics.storia.ro/fp_statics",
+  "isFallback": false,
+  "isExperimentalCompile": false,
+  "dynamicIds": [
+    45538,
+    27996,
+    42357,
+    56472,
+    28410,
+    12115
+  ],
+  "gssp": true,
+  "appGip": true,
+  "scriptLoader": []
+}
