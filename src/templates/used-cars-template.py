@@ -14,10 +14,10 @@ import json
 import csv
 
 # Debug mode
-DEBUG = False
+DEBUG = True
 
-# RealEstateScraper scraper class
-class RealEstateScraper(scrapy.Spider):
+# Used cars scraper class
+class UsedCarsScraper(scrapy.Spider):
     # Scraper name
     name = "used-cars-scraper"
     
@@ -74,7 +74,7 @@ class RealEstateScraper(scrapy.Spider):
     def parse_links(self, response):
         # Extract meta data
         if DEBUG:
-            with open("links.html") as f: response = Selector(text=f.read())
+            with open("links.html", encoding="utf-8") as f: response = Selector(text=f.read())
         else:
             filename = response.meta.get("filename")
             current_page = response.meta.get("current_page")
@@ -161,9 +161,9 @@ if __name__ == "__main__":
     # Run scraper
     if not DEBUG:
         process = CrawlerProcess()
-        process.crawl(RealEstateScraper)
+        process.crawl(UsedCarsScraper)
         process.start()
     
     # Debug function
     else:
-        RealEstateScraper.parse_links(RealEstateScraper, "")
+        UsedCarsScraper.parse_links(UsedCarsScraper, "")

@@ -16,8 +16,8 @@ import csv
 # Debug mode
 DEBUG = False
 
-# RealEstateScraper scraper class
-class RealEstateScraper(scrapy.Spider):
+# Used cars scraper scraper class
+class UsedCarsScraper(scrapy.Spider):
     # Scraper name
     name = "used-cars-scraper"
     
@@ -187,9 +187,9 @@ if __name__ == "__main__":
     # Run scraper
     if not DEBUG:
         process = CrawlerProcess()
-        process.crawl(RealEstateScraper)
+        process.crawl(UsedCarsScraper)
         process.start()
     
     # Debug function
     else:
-        RealEstateScraper.parse_listing(RealEstateScraper, "")
+        UsedCarsScraper.parse_listing(UsedCarsScraper, "")
