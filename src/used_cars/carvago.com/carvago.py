@@ -22,7 +22,7 @@ class RealEstateScraper(scrapy.Spider):
     name = "used-cars-scraper"
     
     # Entry point
-    base_url = "https://example.com"
+    base_url = "https://carvago.com/cars"
 
     # Custom headers
     headers = {
@@ -53,7 +53,7 @@ class RealEstateScraper(scrapy.Spider):
         
         # Write CSV header
         with open(filename, "w") as f:
-            columns = []
+            columns = ['url', 'title', 'general', 'details', 'features']
             f.write(",".join(columns) + "\n")
 
         # Current page
@@ -74,28 +74,26 @@ class RealEstateScraper(scrapy.Spider):
     def parse_links(self, response):
         # Extract meta data
         if DEBUG:
-            with open("links.html") as f: response = Selector(text=f.read())
+            with open("links.html", encoding="utf-8") as f: response = Selector(text=f.read())
         else:
             filename = response.meta.get("filename")
             current_page = response.meta.get("current_page")
 
         # Extract property links
-        links = response.css("a[data-cy='propertyUrl']::attr(href)").getall() # just a placeholder
+        links = response.css("a[class='gtm-element-visibility-impressions-list css-1jlwndo']::attr(href)").getall()
 
         # Loop over property card URLs
         for card_url in links:
-            print(card_url)
             # Crawl property listing
-            #yield response.follow(
-            #    url=card_url,
-            #    headers=self.headers,
-            #    meta={ "filename": filename },
-            #    callback=self.parse_listing
-            #)
-            #break
+            yield response.follow(
+                url=card_url,
+                headers=self.headers,
+                meta={ "filename": filename },
+                callback=self.parse_listing
+            )
  
         # Extract total pages
-        try: total_pages = 10
+        try: total_pages = max([int(i) for i in response.css("a[class='Pagination-link']::text").getall() if i[0].isdigit()])
         except: total_pages = 1
  
         # Handle pagination within each location URL
@@ -116,18 +114,18 @@ class RealEstateScraper(scrapy.Spider):
                 if next_page[-1] == "&": next_page = next_page[:-1]
               
                 # Print debug information
-                print(f"PAGE {current_page} | {total_pages} {next_page}")
+                print("PAGE %s | %s" % (current_page, total_pages), next_page)
 
                 # Crawl next page
-                #yield response.follow(
-                #    url=next_page,
-                #    headers=self.headers,
-                #    meta={
-                #        "filename": filename,
-                #        "current_page": current_page
-                #    },
-                #    callback=self.parse_links
-                #)
+                yield response.follow(
+                    url=next_page,
+                    headers=self.headers,
+                    meta={
+                        "filename": filename,
+                        "current_page": current_page
+                    },
+                    callback=self.parse_links
+                )
 
     # Parse property card listing
     def parse_listing(self, response):
@@ -141,9 +139,37 @@ class RealEstateScraper(scrapy.Spider):
             filename = response.meta.get("filename")
             url = response.url
 
+        # Extract general info
+        try:
+            general = {}
+            for item in response.css("div[class='css-hh37mb']"):
+                feature = [i.strip() for i in item.css(" *::text").getall()]
+                if "css" not in "".join(feature):
+                    general[feature[0]] = "".join(feature[1:])
+        except:
+            general = "N/A"
+        
+        # Extract details
+        try:
+            details = {}
+            for item in response.css("div[class='css-1sxi7eb']"):
+                feature = [i.strip() for i in item.css(" *::text").getall()]
+                if "css" not in "".join(feature):
+                    details[feature[0]] = "".join(feature[1:])
+        except:
+            details = "N/A"
+        
+        # Extract new electric motor specs
+        try: features = [i for i in response.css("ul[class='css-13odobh'] *::text").getall() if "css" not in i]
+        except: features = "N/A"
+        
         # CSV entry
         features = {
-            "url": url
+            "url": url,
+            "title": response.css("h1[role='heading']::text").get(),
+            "general": general,
+            "details": details,
+            "features": features,
         }
 
         # Print extracted data
@@ -166,4 +192,4 @@ if __name__ == "__main__":
     
     # Debug function
     else:
-        RealEstateScraper.parse_links(RealEstateScraper, "")
+        RealEstateScraper.parse_listing(RealEstateScraper, "")
