@@ -47,6 +47,7 @@ function parseListing(scraperStorage) {
 
         // Log extracted data to console
         console.log(JSON.stringify(data, null, 2))
+        console.log("Current page:", scraperStorage.currentPage);
 
         // Save listing to the browser local storage
         scraperStorage.data.push(data)
@@ -107,6 +108,8 @@ async function sleep(ms) {
             // Go to the next page
             scraperStorage.currentPage = "";
             document.getElementsByClassName("Pagination_pagination-button-next__-x23D")[0].click();
+            location.reload();
+            return;
         }
         
         // We just landed on a page
