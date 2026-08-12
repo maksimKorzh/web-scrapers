@@ -135,11 +135,28 @@ function parseLinks(scraperStorage) {
 // Navigate to the next listing URL
 function parseListing(scraperStorage) {
     try {
+        // Extract features
+        let features = [];
+        let featureSelector = document.getElementsByClassName("details-property_features");
+
+        // Loop over features
+        for (let div of featureSelector) {
+            for (let ul of div.children) {
+                for (let li of ul.children) {
+                    // Collect features
+                    features.push(li.textContent.trim().replace("\n", ""));
+                }
+            }
+        }
+
         // Extract listing data
         let data = {
             "url": location.href,
-            
-        };
+            "title": document.getElementsByClassName("main-info__title-main")[0].innerHTML,
+            "price": document.getElementsByClassName("info-data-price")[0].children[0].innerHTML,
+            "features": features,
+            "description": document.getElementsByClassName("comment")[0].textContent.trim().replaceAll("\n", ""),
+        }
 
         // Log extracted data to console
         console.log(JSON.stringify(data, null, 2))
@@ -194,7 +211,7 @@ async function sleep(ms) {
         localStorage.setItem("scraper", JSON.stringify(scraperStorage));
         
         // If no more URLs to crawl
-        if (scraperStorage.listingUrlIndex == 3/*scraperStorage.listingUrls.length*/) {
+        if (scraperStorage.listingUrlIndex == scraperStorage.listingUrls.length) {
             // Reset listing URL list
             scraperStorage.listingUrls = [];
             scraperStorage.listingUrlIndex = -1;
