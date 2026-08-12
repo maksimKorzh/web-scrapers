@@ -11,7 +11,7 @@ const DELAY = 5000;
 // UI message handler
 chrome.runtime.onMessage.addListener((message) => {
     // Get scraper status
-    if (message.action == "scraperStatus") {
+    if (message.action == "status") {
         // Load scraper storage if available
         let scraperStorage = JSON.parse(localStorage.getItem("scraper"));
         
@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener((message) => {
     }
     
     // Create scraper storage
-    else if (message.action == "createScraper") {
+    else if (message.action == "create") {
         // Load scraper storage if available
         let scraperStorage = JSON.parse(localStorage.getItem("scraper"));
 
@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener((message) => {
     }
     
     // Clear scraper storage
-    else if (message.action == "removeScraper") {
+    else if (message.action == "remove") {
         // Load scraper storage if available
         let scraperStorage = JSON.parse(localStorage.getItem("scraper"));
 
@@ -59,7 +59,7 @@ chrome.runtime.onMessage.addListener((message) => {
     }
     
     // Start scraper
-    else if (message.action == "startScraper") {
+    else if (message.action == "start") {
         // Load scraper storage if available
         let scraperStorage = JSON.parse(localStorage.getItem("scraper"));
         
@@ -76,7 +76,7 @@ chrome.runtime.onMessage.addListener((message) => {
     }
     
     // Stop scraper
-    else if (message.action == "stopScraper") {
+    else if (message.action == "stop") {
         // Load scraper storage if available
         let scraperStorage = JSON.parse(localStorage.getItem("scraper"));
         
@@ -92,7 +92,7 @@ chrome.runtime.onMessage.addListener((message) => {
     }
     
     // Download scraped data
-    else if (message.action == "downloadData") {
+    else if (message.action == "download") {
         // Load scraper storage if available
         let scraperStorage = JSON.parse(localStorage.getItem("scraper"));
         
