@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Web Scraper",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+   "action": {
+    "default_popup": "ui.html"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.idealista.com/*"],
+      "js": ["scraper.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
