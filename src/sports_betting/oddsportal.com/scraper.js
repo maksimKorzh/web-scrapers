@@ -1,7 +1,7 @@
 /*
 
     A Chrome extension to scrape data from
-      https://www.idealista.com/
+      https://www.oddsportal.com/
 
 */
 
@@ -128,43 +128,95 @@ chrome.runtime.onMessage.addListener((message) => {
 
 // Extract useful data from target HTML page
 function parseLinks(scraperStorage) {
-    let linkSelectors = document.getElementsByClassName("item-link");
+    let linkSelectors = document.getElementsByClassName("min-w-0 flex-1 items-center border-black-borders md:border-r-0 max-md:border-r max-md:py-2 max-md:pl-2 max-md:pr-1 flex max-mt:items-center max-mt:gap-0 min-mt:grid min-mt:grid-cols-[72px_1fr] min-mt:items-center min-mt:gap-x-2");
     for (let link of linkSelectors) scraperStorage.listingUrls.push(link.href);
 }
 
-// Navigate to the next listing URL
-function parseListing(scraperStorage) {
-    try {
-        // Extract features
-        let features = [];
-        let featureSelector = document.getElementsByClassName("details-property_features");
-
-        // Loop over features
-        for (let div of featureSelector) {
-            for (let ul of div.children) {
-                for (let li of ul.children) {
-                    // Collect features
-                    features.push(li.textContent.trim().replace("\n", ""));
-                }
+// Extract odds data
+async function parseOdds(scraperStorage) {
+    let allOdds = [];
+    let rows = null;
+    let ready = false;
+    while (ready == false) {
+        console.log("Waiting for odds data to be loaded...");
+        await sleep(1000);
+        rows = document.getElementsByClassName("h-9 ");
+        for (let row of rows) {
+            try {
+                if (row.children[col].children[0].children[0].children[0].children[0].children[1]) ready = true;
+            } catch(e) {}
+        }
+    }
+    
+    for (let row of rows) {
+        if (row.tagName == "TR") {
+            let oddsData = {
+                "current": [
+                    row.children[0].textContent.split("claim bonus")[0],
+                    row.children[1].textContent,
+                    row.children[2].textContent,
+                    row.children[3].textContent,
+                    row.children[4].textContent
+                ],
+    
+                "movements": [[], [], []]
             }
+            console.log("Extracted basic info...");
+            try {
+                for (let col = 1; col <= 3; col++) {
+                    console.log("Extracting odd movements...");
+                    // Click odd to get movements
+                    try {
+                        document.getElementsByClassName("ml-auto h-6 w-6 cursor-pointer bg-close-X-black bg-center bg-no-repeat text-transparent")[0].click();
+                    } catch(e) {}
+                        
+                    row.children[col].children[0].children[0].children[0].children[0].children[1].click();
+    
+                    let ready = false;
+                    let movementsSelector = null;
+                    let attempts = 60;
+                    while (ready == false) {
+                        await sleep(1000);
+                        movementsSelector = document.getElementsByClassName("flex flex-col gap-1 text-xs");
+                        if (movementsSelector.length == 3) ready = true;
+                        else {
+                            attempts--;
+                            if (attempts == 0) break;
+                        }
+                    }
+                    
+                    let movements = [];
+                    let dates = [];
+                    let odds = [];
+                    let diffs = [];
+                    
+                    for (let date of movementsSelector[0].children) dates.push(date.textContent);
+                    for (let odd of movementsSelector[1].children) odds.push(odd.textContent);
+                    for (let diff of movementsSelector[2].children) diffs.push(diff.textContent);
+                        
+                    for (let i = 0; i < dates.length; i++) {
+                        movements.push({
+                            "date": dates[i],
+                            "odd": odds[i],
+                            "diff": diffs[i],
+                        });
+                    }
+                    oddsData.movements[col-1] = movements;
+                }
+            } catch(e) { console.log("Failed extracting movements", e);
+                try {
+                    document.getElementsByClassName("ml-auto h-6 w-6 cursor-pointer bg-close-X-black bg-center bg-no-repeat text-transparent")[0].click();
+                } catch(e) {}
+            }
+            console.log(JSON.stringify(oddsData, null, 2));
+            allOdds.push(oddsData);
         }
-
-        // Extract listing data
-        let data = {
-            "url": location.href,
-            "title": document.getElementsByClassName("main-info__title-main")[0].innerHTML,
-            "price": document.getElementsByClassName("info-data-price")[0].children[0].innerHTML,
-            "features": features,
-            "description": document.getElementsByClassName("comment")[0].textContent.trim().replaceAll("\n", ""),
-        }
-
-        // Log extracted data to console
-        console.log(JSON.stringify(data, null, 2))
-        console.log("\nCurrent page:", scraperStorage.currentPage);
-
-        // Save listing to the browser local storage
-        scraperStorage.data.push(data)
-    } catch(e) {}
+    }
+    
+    scraperStorage.data.push({
+        "date": Date().toString().split(" ").slice(0, 5).join(),
+        "odds": allOdds
+    })
 }
 
 // Wait before going to the next page
@@ -181,14 +233,6 @@ async function sleep(ms) {
     if (scraperStorage == null) return;
     
     else if (scraperStorage.running) {
-        // We are done crawling all listings on this page
-        if (scraperStorage.currentPage == location.href) {
-            // Go to the next page
-            scraperStorage.currentPage = "";
-            location.href = document.getElementsByClassName("icon-arrow-right-after")[0].href
-            return;
-        }
-        
         // We just landed on a page
         if (scraperStorage.listingUrls.length == 0) {
             // Get the list of listing URLs
@@ -202,7 +246,7 @@ async function sleep(ms) {
         }
         
         // We are crawling through listing URLs within the current page
-        else parseListing(scraperStorage);
+        else parseOdds(scraperStorage);
         
         // Update URL index
         scraperStorage.listingUrlIndex++;
