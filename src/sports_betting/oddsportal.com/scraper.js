@@ -1,7 +1,7 @@
 /*
 
     A Chrome extension to scrape data from
-      https://www.oddsportal.com/
+         https://www.oddsportal.com/
 
 */
 
@@ -149,6 +149,7 @@ async function parseLinks(scraperStorage) {
 
 // Extract odds data
 async function parseOdds(scraperStorage) {
+    // Wait until page is fully loaded
     let rows = null;
     let ready = false;
     while (ready == false) {
@@ -164,6 +165,7 @@ async function parseOdds(scraperStorage) {
         }
     }
     
+    // Extracted data
     let allOdds = {
         "scrape_date": Date().toString().split(" ").slice(0, 5).join(),
         "sport": "Football, Premier League",
@@ -172,6 +174,7 @@ async function parseOdds(scraperStorage) {
         "bookmaker_odds": [],
     };
     
+    // Loop over bookmaker odds
     for (let row of rows) {
         if (isRunning() == false) return;
         if (row.tagName == "TR") {
@@ -191,13 +194,15 @@ async function parseOdds(scraperStorage) {
             try {
                 for (let col = 1; col <= 3; col++) {
                     if (isRunning() == false) return;
-                    // Click odd to get movements
-                    try {
+                    
+                    try { // Close previous windows
                         document.getElementsByClassName("ml-auto h-6 w-6 cursor-pointer bg-close-X-black bg-center bg-no-repeat text-transparent")[0].click();
                     } catch(e) {}
-                        
+                    
+                    // Click odd to get movements
                     row.children[col].children[0].children[0].children[0].children[0].children[1].click();
     
+                    // Wait for odds movements to load
                     let ready = false;
                     let movementsSelector = null;
                     let attempts = 60;
@@ -216,23 +221,21 @@ async function parseOdds(scraperStorage) {
                         }
                     }
                     
+                    // Extract odds movements
                     let movements = [];
                     let dates = [];
                     let odds = [];
                     let diffs = [];
-                    
                     for (let date of movementsSelector[0].children) dates.push(date.textContent);
                     for (let odd of movementsSelector[1].children) odds.push(odd.textContent);
                     for (let diff of movementsSelector[2].children) diffs.push(diff.textContent);
-                        
                     for (let i = 0; i < dates.length; i++) {
                         movements.push({
                             "date": dates[i],
                             "odd": odds[i],
                             "diff": diffs[i],
                         });
-                    }
-                    oddsData.movements[col-1] = movements;
+                    } oddsData.movements[col-1] = movements;
                 }
             } catch(e) { console.log("Failed extracting movements", e);
                 try {
@@ -244,7 +247,7 @@ async function parseOdds(scraperStorage) {
         }
     }
     
-    //
+    // Store scraped data to local scraper storage
     scraperStorage.data.push(allOdds);
 }
 
