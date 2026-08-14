@@ -66,6 +66,9 @@ chrome.runtime.onMessage.addListener((message) => {
         // Scraper storage doesn't exist
         if (scraperStorage == null) alert("Scraper storage doesn't exist");
         
+        // Already running
+        else if (scraperStorage.running == true) alert("Scraper is running");
+        
         // Start scraper
         else {
             scraperStorage.running = true;
@@ -82,6 +85,9 @@ chrome.runtime.onMessage.addListener((message) => {
         
         // Scraper storage doesn't exist
         if (scraperStorage == null) alert("Scraper storage doesn't exist");
+        
+        // Already stopped
+        else if (scraperStorage.running == false) alert("Scraper is not running");
         
         // Start scraper
         else {
