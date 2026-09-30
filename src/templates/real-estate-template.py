@@ -35,8 +35,13 @@ class RealEstateScraper(scrapy.Spider):
         "CONCURRENT_REQUESTS_PER_DOMAIN": 1,
         "DOWNLOAD_DELAY": 1
     }
-    
-    # Crawler"s entry
+
+    # Redirect custom entry point
+    async def start(self):
+        for request in self.start_requests():
+            yield request
+
+    # Crawler's entry
     def start_requests(self):
         # Init filename
         is_rent = "Rent" if "rent" in self.base_url else "Sale"
